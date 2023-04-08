@@ -6,7 +6,7 @@ Note: These instructions are for Ubuntu
 Most of these are for building neovim and mason (The LSP manager)
 
 ```
-sudo apt-get install ninja-build gettext libtool-bin cmake g++ pkg-config unzip curl tar git gzip unzip grep ripgrep npm
+sudo apt-get install ninja-build gettext libtool-bin cmake g++ pkg-config unzip curl tar git gzip grep ripgrep npm
 ```
 
 ## Build Neovim
