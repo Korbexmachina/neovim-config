@@ -1,5 +1,7 @@
 # Setup:
 
+Note: These instructions are for Ubuntu
+
 ## Install Dependencies
 Most of these are for building neovim and mason (The LSP manager)
 
