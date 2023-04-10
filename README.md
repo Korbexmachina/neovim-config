@@ -1,4 +1,4 @@
-[![]https://img.shields.io/github/repo-size/korbexmachina/neovim-config?label=size]
+![](https://img.shields.io/github/repo-size/korbexmachina/neovim-config?label=size)
 
 # Setup:
 
