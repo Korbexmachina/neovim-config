@@ -1,3 +1,5 @@
+[![]https://img.shields.io/github/repo-size/korbexmachina/neovim-config?label=size]
+
 # Setup:
 
 Note: These instructions are for Ubuntu
