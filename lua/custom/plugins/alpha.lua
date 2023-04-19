@@ -19,10 +19,14 @@
              dashboard.button("SPC ?", "󰋖  Search Help"),
              dashboard.button( "q", "  Quit NVIM" , ":qa<CR>"),
          }
-         -- local handle = io.popen('fortune')
-         -- local fortune = handle:read("*a")
-         -- handle:close()
-         -- dashboard.section.footer.val = fortune
+        vim.api.nvim_create_autocmd("UIEnter", {
+            callback = function()
+            local stats = require("lazy").stats()
+            local time = math.floor(stats.startuptime * 100 + 0.5) / 100
+            dashboard.section.footer.val = { " ", " ", " ", "Neovim loaded " .. stats.count .. " plugins   in " .. time .. "ms" }
+            dashboard.section.footer.opts.hl = "DashboardFooter"
+            end,
+        })
          dashboard.config.opts.noautocmd = true
          vim.cmd[[autocmd User AlphaReady echo 'ready']]
          alpha.setup(dashboard.config)
