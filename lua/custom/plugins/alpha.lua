@@ -13,10 +13,10 @@
          }
          dashboard.section.buttons.val = {
              dashboard.button( "e", "  New file" , ":ene <BAR> startinsert <CR>"),
-             dashboard.button("SPC s f", " Search Files"),
-             dashboard.button("SPC s g", " Search by Grep"),
-             dashboard.button("SPC s r", " Recent Files"),
-             dashboard.button("SPC ?", "󰋖 Search Help"),
+             dashboard.button("SPC s f", "  Search Files"),
+             dashboard.button("SPC s g", "  Search by Grep"),
+             dashboard.button("SPC s r", "  Recent Files"),
+             dashboard.button("SPC ?", "󰋖  Search Help"),
              dashboard.button( "q", "  Quit NVIM" , ":qa<CR>"),
          }
          local handle = io.popen('fortune')
