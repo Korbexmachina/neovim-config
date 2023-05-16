@@ -88,8 +88,6 @@ require('lazy').setup({
   -- requirements installed.
   {
     'nvim-telescope/telescope-fzf-native.nvim',
-    -- NOTE: If you are having trouble with this installation,
-    --       refer to the README for telescope-fzf-native for more instructions.
     build = 'make',
     cond = function()
       return vim.fn.executable 'make' == 1
@@ -116,7 +114,7 @@ require('lazy').setup({
 vim.o.hlsearch = false
 
 -- Make line numbers default
-vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
