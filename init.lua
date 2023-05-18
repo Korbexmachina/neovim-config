@@ -106,6 +106,14 @@ require('lazy').setup({
     end,
   },
 
+  {
+      "nvim-neorg/neorg",
+      build = ":Neorg sync-parsers",
+      opts = {
+      },
+      dependencies = { { "nvim-lua/plenary.nvim" } },
+  },
+
   { import = 'custom.plugins' },
 }, {})
 
@@ -147,7 +155,6 @@ vim.o.timeoutlen = 300
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
--- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
 -- [[ Basic Keymaps ]]
@@ -179,7 +186,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim', 'svelte', 'html', 'css' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim', 'svelte', 'html', 'css', 'org', 'norg'},
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
@@ -239,6 +246,37 @@ require('nvim-treesitter.configs').setup {
       },
     },
   },
+}
+
+-- Neorg Setup
+require('neorg').setup {
+        load = {
+            ["core.defaults"] = {},
+            ["core.autocommands"] = {},
+            ["core.highlights"] = {},
+            ["core.keybinds"] = {},
+            ["core.mode"] = {},
+            ["core.neorgcmd"] = {},
+            ["core.integrations.treesitter"] = {},
+            ["core.concealer"] = {},
+            ["core.syntax"] = {},
+            ["core.completion"] = {
+              config = {
+                  engine = "nvim-cmp",
+                  name = "neorg",
+              },
+            },
+            ["core.dirman"] = {
+                config = {
+                    workspaces = {
+                        school = "~/notes/school",
+                        work = "~/notes/work",
+                        home = "~/notes/home",
+                        todo = "~/notes/todo",
+                    }
+                }
+            },
+        },
 }
 
 -- Diagnostic keymaps
@@ -384,6 +422,7 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    { name = 'neorg' },
   },
 }
 
