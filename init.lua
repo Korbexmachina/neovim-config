@@ -273,7 +273,8 @@ require('neorg').setup {
                         work = "~/notes/work",
                         home = "~/notes/home",
                         todo = "~/notes/todo",
-                    }
+                    },
+                    default_workspace = "home",
                 }
             },
         },
