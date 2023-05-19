@@ -16,6 +16,7 @@
              dashboard.button("SPC s f", "  Search Files"),
              dashboard.button("SPC s g", "  Search by Grep"),
              dashboard.button("SPC s r", "  Recent Files"),
+             dashboard.button("SPC n i", "  Neorg Index", ":Neorg index<CR>"),
              dashboard.button("SPC ?", "󰋖  Search Help"),
              dashboard.button( "q", "  Quit NVIM" , ":qa<CR>"),
          }
