@@ -20,6 +20,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  'github/copilot.vim',
   'ThePrimeagen/vim-be-good',
   -- Git related plugins
   'tpope/vim-fugitive',
