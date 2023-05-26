@@ -28,13 +28,7 @@ Clone the config from my GitHub
 ```
 cd ~/.config
 
-git clone https://github.com/korbexmachina/neovim-config
-```
-
-Rename the directory to nvim
-
-```
-mv neovim-config nvim
+git clone https://github.com/korbexmachina/neovim-config nvim
 ```
 
 That's it!
