@@ -1,4 +1,5 @@
 -- Configured and maintained by Korben Tompkin
+-- Feel free to use this config as a base for your own Neovim config.
 
 -- Set <space> as the leader key
 vim.g.mapleader = ' '
