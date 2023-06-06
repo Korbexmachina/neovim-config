@@ -109,11 +109,11 @@ require('lazy').setup({
   },
 
   {
-      "nvim-neorg/neorg",
-      build = ":Neorg sync-parsers",
-      opts = {
-      },
-      dependencies = { { "nvim-lua/plenary.nvim" } },
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    opts = {
+    },
+    dependencies = { { "nvim-lua/plenary.nvim" } },
   },
 
   { import = 'custom.plugins' },
@@ -252,34 +252,34 @@ require('nvim-treesitter.configs').setup {
 
 -- Neorg Setup
 require('neorg').setup {
-        load = {
-            ["core.defaults"] = {},
-            ["core.autocommands"] = {},
-            ["core.highlights"] = {},
-            ["core.keybinds"] = {},
-            ["core.mode"] = {},
-            ["core.neorgcmd"] = {},
-            ["core.integrations.treesitter"] = {},
-            ["core.concealer"] = {},
-            ["core.syntax"] = {},
-            ["core.completion"] = {
-              config = {
-                  engine = "nvim-cmp",
-                  name = "neorg",
-              },
-            },
-            ["core.dirman"] = {
-                config = {
-                    workspaces = {
-                        school = "~/notes/school",
-                        work = "~/notes/work",
-                        home = "~/notes/home",
-                        todo = "~/notes/todo",
-                    },
-                    default_workspace = "home",
-                }
-            },
+  load = {
+    ["core.defaults"] = {},
+    ["core.autocommands"] = {},
+    ["core.highlights"] = {},
+    ["core.keybinds"] = {},
+    ["core.mode"] = {},
+    ["core.neorgcmd"] = {},
+    ["core.integrations.treesitter"] = {},
+    ["core.concealer"] = {},
+    ["core.syntax"] = {},
+    ["core.completion"] = {
+      config = {
+        engine = "nvim-cmp",
+        name = "neorg",
+      },
+    },
+    ["core.dirman"] = {
+      config = {
+        workspaces = {
+          school = "~/notes/school",
+          work = "~/notes/work",
+          home = "~/notes/home",
+          todo = "~/notes/todo",
         },
+        default_workspace = "home",
+      }
+    },
+  },
 }
 
 -- Diagnostic keymaps
