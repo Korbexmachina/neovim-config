@@ -21,6 +21,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+
+  {
+    'christoomey/vim-tmux-navigator',
+    lazy = false,
+  },
+
   'github/copilot.vim',
   'ThePrimeagen/vim-be-good',
   -- Git related plugins
@@ -129,7 +135,7 @@ vim.o.relativenumber = true
 vim.o.number = true
 
 -- Enable mouse mode
-vim.o.mouse = 'a'
+-- vim.o.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
