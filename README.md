@@ -1,5 +1,7 @@
 ![](https://img.shields.io/github/repo-size/korbexmachina/neovim-config?label=size)
 
+ANNOUNCEMENT: This repository is now archived, see [korbexmachina/nvim](https://github.com/korbexmachina/nvim) for my new config.
+
 # Setup:
 
 Note: These instructions are for Ubuntu
